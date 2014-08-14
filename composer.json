@@ -1,0 +1,45 @@
+{
+    "name": "ciricihq/blocks",
+    "authors": [
+        {
+            "name": "Cirici New Media",
+            "email": "info@cirici.com",
+            "homepage": "http://cirici.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Òscar Casajuana",
+            "email": "oscar@cirici.com",
+            "homepage": "http://racotecnic.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Enyeli González",
+            "email": "enyeli@cirici.com",
+            "role": "Developer"
+        }
+    ],
+    "description": "Blocks plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "plugin", "view"],
+    "license": "GPL-3.0",
+    "require": {
+        "php": ">=5.4.19",
+        "cakephp/cakephp": "~3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blocks\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Blocks\\Test\\": "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0.0",
+        "squizlabs/php_codesniffer": "~2.5.1",
+        "ciricihq/cirici-codesniffer": "dev-master"
+    }
+}

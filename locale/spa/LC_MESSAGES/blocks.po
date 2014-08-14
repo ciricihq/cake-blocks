@@ -1,0 +1,103 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CakePHP Blocks Plugin\n"
+"POT-Creation-Date: 2014-08-25 15:47+0200\n"
+"PO-Revision-Date: 2014-08-27 10:58+0100\n"
+"Last-Translator: Òscar Casajuana <oscar@cirici.com>\n"
+"Language-Team: Cirici New Media <oscar@cirici.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Spanish\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: /app/plugins/blocks/config/bootstrap.php:5
+msgid "Blocks"
+msgstr "Bloques"
+
+#: /app/plugins/blocks/config/bootstrap.php:10
+msgid "New block"
+msgstr "Nuevo bloque"
+
+#: /app/plugins/blocks/config/bootstrap.php:14
+msgid "List blocks"
+msgstr "Listar bloques"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:13
+msgid "%s list"
+msgstr "Listado de %s"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:13
+msgid "blocks"
+msgstr "bloques"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:25;51
+msgid "The %s has been saved"
+msgstr "El %s ha sido guardado"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:25;30;34;51;56
+msgid "block"
+msgstr "bloque"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:30;56
+msgid "The %s could not be saved. Please, try again."
+msgstr "El %s no se ha podido guardar. Inténtalo de nuevo por favor."
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:34
+msgid "Add %s"
+msgstr "Añadir %s"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:43
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:43
+msgid "Block"
+msgstr "Bloque"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:80
+msgid "%s was deleted"
+msgstr "%s ha sido eliminado"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:80;84
+msgid "The block"
+msgstr "El bloque"
+
+#: /app/plugins/blocks/controllers/blocks_controller.php:84
+msgid "%s was not deleted"
+msgstr "%s no se ha eliminado"
+
+#: /app/plugins/blocks/models/block.php:36
+msgid "This field cannot be left empty"
+msgstr "Este campo no puede quedar vacío"
+
+#: /app/plugins/blocks/views/blocks/admin_add.ctp:10
+#: /app/plugins/blocks/views/blocks/admin_index.ctp:8
+msgid "Title"
+msgstr "Título"
+
+#: /app/plugins/blocks/views/blocks/admin_add.ctp:12
+#: /app/plugins/blocks/views/blocks/admin_index.ctp:9
+msgid "Content"
+msgstr "Contenido"
+
+#: /app/plugins/blocks/views/blocks/admin_index.ctp:7
+msgid "Slug"
+msgstr "Slug"
+
+#: /app/plugins/blocks/views/blocks/admin_index.ctp:10
+msgid "Created"
+msgstr "Creado"
+
+#: /app/plugins/blocks/views/blocks/admin_index.ctp:11
+msgid "Modified"
+msgstr "Modificado"
+
+#: /app/plugins/blocks/views/blocks/admin_index.ctp:12
+msgid "Actions"
+msgstr "Acciones"

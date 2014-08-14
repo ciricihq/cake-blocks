@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `bl_blocks` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL,
+  `slug` VARCHAR(255) NOT NULL,
+  `content` TEXT NULL,
+  `created` DATETIME NULL,
+  `modified` DATETIME NULL,
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB;
