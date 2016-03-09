@@ -1,5 +1,5 @@
 <?php
-namespace Blocks\Model\Table;
+namespace Cirici\Blocks\Model\Table;
 
 use Cake\ORM\Table;
 use Cake\Validation\Validator;

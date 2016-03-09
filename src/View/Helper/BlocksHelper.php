@@ -1,5 +1,5 @@
 <?php
-namespace Blocks\View\Helper;
+namespace Cirici\Blocks\View\Helper;
 
 use Cake\ORM\TableRegistry;
 use Cake\View\Helper;
@@ -14,7 +14,7 @@ class BlocksHelper extends Helper
      */
     public function getFull($slug)
     {
-        $Block = TableRegistry::get('Blocks.Blocks');
+        $Block = TableRegistry::get('Cirici/Blocks.Blocks');
         $Blocks = $Block
             ->find('all')
             ->where(['slug' => $slug])

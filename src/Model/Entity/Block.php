@@ -1,5 +1,5 @@
 <?php
-namespace Blocks\Model\Entity;
+namespace Cirici\Blocks\Model\Entity;
 
 use Cake\ORM\Entity;
 

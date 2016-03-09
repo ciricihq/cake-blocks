@@ -1,7 +1,7 @@
 <?php
-namespace Blocks\Test\TestCase\View\Helper;
+namespace Cirici\Blocks\Test\TestCase\View\Helper;
 
-use Blocks\View\Helper\BlocksHelper;
+use Cirici\Blocks\View\Helper\BlocksHelper;
 use Cake\I18n\FrozenTime;
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
@@ -11,7 +11,7 @@ use Cake\View\View;
  */
 class BlocksHelperTest extends TestCase
 {
-    public $fixtures = ['plugin.blocks.blBlocks'];
+    public $fixtures = ['plugin.Cirici/Blocks.blBlocks'];
 
     /**
      * setUp method

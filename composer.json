@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Blocks\\": "src"
+            "Cirici\\Blocks\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Blocks\\Test\\": "tests"
+            "Cirici\\Blocks\\Test\\": "tests"
         }
     },
     "require-dev": {
