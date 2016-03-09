@@ -1,10 +1,10 @@
 <?php
 namespace Cirici\Blocks\Test\TestCase\View\Helper;
 
-use Cirici\Blocks\View\Helper\BlocksHelper;
 use Cake\I18n\FrozenTime;
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
+use Cirici\Blocks\View\Helper\BlocksHelper;
 
 /**
  * Blocks\View\Helper\BlocksHelper Test Case
