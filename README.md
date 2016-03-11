@@ -2,9 +2,9 @@ CakePHP Blocks Plugin
 =====================
 
 [![Build Status](https://img.shields.io/travis/ciricihq/cake-blocks/master.svg?style=flat-square)](https://travis-ci.org/ciricihq/cake-blocks)
-[![Coverage](https://img.shields.io/codecov/c/github/ciricihq/cake-blocks.svg?style=flat-square)](https://codecov.io/github/ciricihq/cake-blocks)
-[![Total Downloads](https://img.shields.io/packagist/dt/ciricihq/cake-blocks.svg?style=flat-square)](https://packagist.org/packages/ciricihq/blocks)
-[![License](https://img.shields.io/github/license/ciricihq/cake-blocks.svg)](LICENSE.md)
+[![Coverage](https://img.shields.io/coveralls/ciricihq/cake-blocks.svg?style=flat-square)](https://coveralls.io/github/ciricihq/cake-blocks)
+[![Total Downloads](https://img.shields.io/packagist/dt/ciricihq/blocks.svg?style=flat-square)](https://packagist.org/packages/ciricihq/blocks)
+[![License](https://img.shields.io/github/license/ciricihq/cake-blocks.svg?style=flat-square)](LICENSE.md)
 
 A really simple plugin that allows you to manage and show small content blocks.
 
