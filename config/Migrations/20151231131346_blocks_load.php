@@ -28,6 +28,6 @@ class BlocksLoad extends AbstractMigration
         ])->addColumn('modified', 'datetime', [
             'default' => null,
             'null' => false,
-        ])->update();
+        ])->create();
     }
 }
