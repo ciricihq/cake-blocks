@@ -42,7 +42,7 @@ class BlBlocksFixture extends TestFixture
         [
             'id' => 1,
             'title' => 'Lorem ipsum dolor sit amet',
-            'slug' => 'welcome-to-metropolitan',
+            'slug' => 'welcome',
             'content' => 'Lorem ipsum dolor sit amet, aliquet feugiat.',
             'created' => '2015-12-31 15:23:57',
             'modified' => '2015-12-31 15:23:57'
@@ -50,7 +50,7 @@ class BlBlocksFixture extends TestFixture
         [
             'id' => 2,
             'title' => 'Lorem ipsum dolor sit amet',
-            'slug' => 'welcome-to-fitness',
+            'slug' => 'here-are-some-blocks',
             'content' => 'Lorem ipsum dolor sit amet, aliquet feugiat.',
             'created' => '2015-12-31 15:23:57',
             'modified' => '2015-12-31 15:23:57'
@@ -58,7 +58,7 @@ class BlBlocksFixture extends TestFixture
         [
             'id' => 3,
             'title' => 'Lorem ipsum dolor sit amet',
-            'slug' => 'activities',
+            'slug' => 'just-for-testing-purposes',
             'content' => 'Lorem ipsum dolor sit amet, aliquet feugiat.',
             'created' => '2015-12-31 15:23:57',
             'modified' => '2015-12-31 15:23:57'
@@ -66,7 +66,7 @@ class BlBlocksFixture extends TestFixture
         [
             'id' => 4,
             'title' => 'Lorem ipsum dolor sit amet',
-            'slug' => 'blog',
+            'slug' => 'what-else-could-i-say',
             'content' => 'Lorem ipsum dolor sit amet, aliquet feugiat.',
             'created' => '2015-12-31 15:23:57',
             'modified' => '2015-12-31 15:23:57'

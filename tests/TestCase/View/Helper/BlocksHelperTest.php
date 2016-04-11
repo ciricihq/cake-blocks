@@ -47,12 +47,12 @@ class BlocksHelperTest extends TestCase
         $expected = [
             'id' => 1,
             'title' => 'Lorem ipsum dolor sit amet',
-            'slug' => 'welcome-to-metropolitan',
+            'slug' => 'welcome',
             'content' => 'Lorem ipsum dolor sit amet, aliquet feugiat.',
             'created' => new FrozenTime('2015-12-31 15:23:57'),
             'modified' => new FrozenTime('2015-12-31 15:23:57')
         ];
-        $block = $this->Blocks->getFull('welcome-to-metropolitan');
+        $block = $this->Blocks->getFull('welcome');
         $this->assertArraySubset($expected, $block);
     }
 
@@ -63,7 +63,7 @@ class BlocksHelperTest extends TestCase
      */
     public function testGet()
     {
-        $block = $this->Blocks->get('welcome-to-metropolitan');
+        $block = $this->Blocks->get('welcome');
         $this->assertEquals('Lorem ipsum dolor sit amet, aliquet feugiat.', $block);
     }
 }
