@@ -52,7 +52,7 @@ class BlocksHelperTest extends TestCase
             'created' => new FrozenTime('2015-12-31 15:23:57'),
             'modified' => new FrozenTime('2015-12-31 15:23:57')
         ];
-        $block = $this->Blocks->getFull('welcome');
+        $block = $this->Blocks->get('welcome');
         $this->assertArraySubset($expected, $block);
     }
 
@@ -63,7 +63,7 @@ class BlocksHelperTest extends TestCase
      */
     public function testGet()
     {
-        $block = $this->Blocks->get('welcome');
+        $block = $this->Blocks->getContents('welcome');
         $this->assertEquals('Lorem ipsum dolor sit amet, aliquet feugiat.', $block);
     }
 }

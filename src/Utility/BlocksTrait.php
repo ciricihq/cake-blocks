@@ -11,7 +11,7 @@ trait BlocksTrait
      * @param  string $slug The block's slug.
      * @return array
      */
-    public function getFull($slug)
+    public function get($slug)
     {
         $blocksTable = TableRegistry::get('Cirici/Blocks.Blocks');
         $blocks = $blocksTable
@@ -29,9 +29,9 @@ trait BlocksTrait
      * @param  string $slug The block's slug.
      * @return string
      */
-    public function get($slug)
+    public function getContents($slug)
     {
-        if (!$block = $this->getFull($slug)) {
+        if (!$block = $this->get($slug)) {
             return false;
         }
 
