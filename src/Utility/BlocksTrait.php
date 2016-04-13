@@ -13,14 +13,14 @@ trait BlocksTrait
      */
     public function getFull($slug)
     {
-        $Block = TableRegistry::get('Cirici/Blocks.Blocks');
-        $Blocks = $Block
+        $blocksTable = TableRegistry::get('Cirici/Blocks.Blocks');
+        $blocks = $blocksTable
             ->find('all')
             ->where(['slug' => $slug])
             ->first()
         ;
 
-        return $Blocks->toArray();
+        return $blocks->toArray();
     }
 
     /**

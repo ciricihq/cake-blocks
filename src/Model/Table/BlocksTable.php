@@ -28,7 +28,12 @@ class BlocksTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->notEmpty('title');
+            ->notEmpty('title')
+        ;
+
+        $validator
+            ->notEmpty('slug')
+        ;
 
         return $validator;
     }
