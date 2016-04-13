@@ -65,5 +65,8 @@ class BlocksHelperTest extends TestCase
     {
         $block = $this->Blocks->getContents('welcome');
         $this->assertEquals('Lorem ipsum dolor sit amet, aliquet feugiat.', $block);
+
+        $block = $this->Blocks->getContents('me-l-invento');
+        $this->assertFalse($block);
     }
 }
