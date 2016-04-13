@@ -6,11 +6,9 @@ use Cake\ORM\Entity;
 class Block extends Entity
 {
     protected $_accessible = [
-        'id' => true,
+        '*' => false,
         'title' => true,
         'slug' => true,
-        'content' => true,
-        'created' => true,
-        'modified' => true
+        'content' => true
     ];
 }
