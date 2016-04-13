@@ -32,7 +32,41 @@ Plugin::load('Cirici/Blocks');
 Usage
 -----
 
-> TODO: documentation
+There's a Trait that does all the job, and we've created a `BlockHelper` and a
+`BlocksComponent` so you can use them easily on your CakePHP app.
+
+> The reason for naming the helper in singular is because there's already a
+`Blocks` class in CakePHP's views that would collide with our helper.
+
+To start using them, just load whatever class you want.
+
+For the `BlockHelper`, on your `AppView`'s initialize method, add:
+
+```php
+// src/View/AppView.php
+public function initialize()
+{
+    $this->loadHelper('Cirici/Blocks.Block');
+}
+```
+
+For the `BlocksComponent`, on your `AppController`'s initialize:
+
+```php
+// src/Controller/AppController.php
+public function initialize()
+{
+    $this->loadComponent('Cirici/Blocks.Blocks');
+}
+```
+
+### Methods
+
+Right now there are just two methods available (as said, this plugin is really simple):
+
+- `get`: retrieves the entire Block entity by its slug.
+- `getContents`: just returns the Block's `content` field contents.
+
 
 Patches & Features
 ------------------
@@ -43,8 +77,6 @@ Patches & Features
 * Commit - do not mess with license, todo, version, etc. (if you do change any, bump them into commits of
 their own that I can ignore when I pull)
 * Pull request - bonus point for topic branches
-
-To ensure your PRs are considered for upstream, you MUST follow the [CakePHP coding standards][standards].
 
 Bugs & Feedback
 ---------------
