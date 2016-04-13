@@ -52,7 +52,7 @@ class BlocksHelperTest extends TestCase
             'created' => new FrozenTime('2015-12-31 15:23:57'),
             'modified' => new FrozenTime('2015-12-31 15:23:57')
         ];
-        $block = $this->Blocks->get('welcome');
+        $block = $this->Blocks->get('welcome')->toArray();
         $this->assertArraySubset($expected, $block);
     }
 

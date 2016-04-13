@@ -20,7 +20,7 @@ trait BlocksTrait
             ->first()
         ;
 
-        return $blocks->toArray();
+        return $blocks;
     }
 
     /**
@@ -35,6 +35,6 @@ trait BlocksTrait
             return false;
         }
 
-        return $block['content'];
+        return $block->content;
     }
 }
