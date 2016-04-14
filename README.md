@@ -33,10 +33,7 @@ Usage
 -----
 
 There's a Trait that does all the job, and we've created a `BlockHelper` and a
-`BlocksComponent` so you can use them easily on your CakePHP app.
-
-> The reason for naming the helper in singular is because there's already a
-`Blocks` class in CakePHP's views that would collide with our helper.
+`BlockComponent` so you can use them easily on your CakePHP app.
 
 To start using them, just load whatever class you want.
 
@@ -50,13 +47,13 @@ public function initialize()
 }
 ```
 
-For the `BlocksComponent`, on your `AppController`'s initialize:
+For the `BlockComponent`, on your `AppController`'s initialize:
 
 ```php
 // src/Controller/AppController.php
 public function initialize()
 {
-    $this->loadComponent('Cirici/Blocks.Blocks');
+    $this->loadComponent('Cirici/Blocks.Block');
 }
 ```
 
