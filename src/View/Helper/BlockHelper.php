@@ -7,7 +7,7 @@ use Cake\View\Helper;
 use Cake\View\View;
 use Cirici\Blocks\Utility\BlocksTrait;
 
-class BlocksHelper extends Helper
+class BlockHelper extends Helper
 {
     use BlocksTrait;
 

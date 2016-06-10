@@ -3,12 +3,12 @@ namespace Cirici\Blocks\Test\TestCase\View\Helper;
 
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
-use Cirici\Blocks\View\Helper\BlocksHelper;
+use Cirici\Blocks\View\Helper\BlockHelper;
 
 /**
  * Blocks\View\Helper\BlocksHelper Test Case
  */
-class BlocksHelperTest extends TestCase
+class BlockHelperTest extends TestCase
 {
     public $fixtures = ['plugin.Cirici/Blocks.blBlocks'];
 
@@ -21,7 +21,7 @@ class BlocksHelperTest extends TestCase
     {
         parent::setUp();
         $this->view = new View();
-        $this->Blocks = new BlocksHelper($this->view);
+        $this->Block = new BlockHelper($this->view);
     }
 
     /**
@@ -31,7 +31,7 @@ class BlocksHelperTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Blocks);
+        unset($this->Block);
 
         parent::tearDown();
     }
@@ -41,13 +41,13 @@ class BlocksHelperTest extends TestCase
         $this->assertAttributeEquals(
             'Cirici/Blocks.Blocks',
             'table',
-            $this->Blocks
+            $this->Block
         );
 
         $this->assertAttributeEquals(
             'BlBlocks',
             'table',
-            new BlocksHelper($this->view, ['table' => 'BlBlocks'])
+            new BlockHelper($this->view, ['table' => 'BlBlocks'])
         );
     }
 
@@ -58,7 +58,7 @@ class BlocksHelperTest extends TestCase
      */
     public function testGetContents()
     {
-        $block = $this->Blocks->getContents('welcome');
+        $block = $this->Block->getContents('welcome');
         $this->assertEquals('Lorem ipsum dolor sit amet, aliquet feugiat.', $block);
     }
 
@@ -69,7 +69,7 @@ class BlocksHelperTest extends TestCase
      */
     public function testGet()
     {
-        $block = $this->Blocks->get('welcome');
+        $block = $this->Block->get('welcome');
         $this->assertInstanceOf('Cirici\Blocks\Model\Entity\Block', $block);
     }
 }
