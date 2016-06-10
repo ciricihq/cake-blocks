@@ -37,4 +37,35 @@ class BlocksTable extends Table
 
         return $validator;
     }
+
+    /**
+     * Retrieves an entire block from given identifier
+     *
+     * @param  string $slug The block's slug.
+     * @return array
+     */
+    public function getBlock($slug)
+    {
+        $block = $this->find('all')
+            ->where(['slug' => $slug])
+            ->first()
+        ;
+
+        return $block;
+    }
+
+    /**
+     * Just returns the contents of a block.
+     *
+     * @param  string $slug The block's slug.
+     * @return string
+     */
+    public function getContents($slug)
+    {
+        if (!$block = $this->getBlock($slug)) {
+            return false;
+        }
+
+        return $block->content;
+    }
 }

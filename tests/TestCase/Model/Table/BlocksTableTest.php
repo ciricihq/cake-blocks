@@ -1,6 +1,7 @@
 <?php
 namespace Cirici\Blocks\Test\TestCase\Model\Table;
 
+use Cake\I18n\FrozenTime;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 use Cirici\Blocks\Model\Table\BlocksTable;
@@ -95,5 +96,38 @@ class BlocksTableTest extends TestCase
         ];
         $block = $this->Blocks->newEntity($block);
         $this->assertFalse(empty($block->errors()));
+    }
+
+    /**
+     * Test getFull method
+     *
+     * @return void
+     */
+    public function testGetBlock()
+    {
+        $expected = [
+            'id' => 1,
+            'title' => 'Lorem ipsum dolor sit amet',
+            'slug' => 'welcome',
+            'content' => 'Lorem ipsum dolor sit amet, aliquet feugiat.',
+            'created' => new FrozenTime('2015-12-31 15:23:57'),
+            'modified' => new FrozenTime('2015-12-31 15:23:57')
+        ];
+        $block = $this->Blocks->getBlock('welcome')->toArray();
+        $this->assertArraySubset($expected, $block);
+    }
+
+    /**
+     * Test get method
+     *
+     * @return void
+     */
+    public function testGetContents()
+    {
+        $block = $this->Blocks->getContents('welcome');
+        $this->assertEquals('Lorem ipsum dolor sit amet, aliquet feugiat.', $block);
+
+        $block = $this->Blocks->getContents('me-l-invento');
+        $this->assertFalse($block);
     }
 }

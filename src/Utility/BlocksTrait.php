@@ -1,10 +1,21 @@
 <?php
 namespace Cirici\Blocks\Utility;
 
-use Cake\ORM\TableRegistry;
-
 trait BlocksTrait
 {
+    /**
+     * The table used by this component.
+     *
+     * @var string
+     */
+    protected $table;
+
+    /**
+     * The Blocks table instance
+     * @var Cirici\Blocks\Model\Table\Blocks
+     */
+    protected $Blocks;
+
     /**
      * Retrieves an entire block from given identifier
      *
@@ -13,14 +24,7 @@ trait BlocksTrait
      */
     public function get($slug)
     {
-        $blocks = TableRegistry::get('Cirici/Blocks.Blocks');
-        $block = $blocks
-            ->find('all')
-            ->where(['slug' => $slug])
-            ->first()
-        ;
-
-        return $block;
+        return $this->Blocks->getBlock($slug);
     }
 
     /**
@@ -31,10 +35,6 @@ trait BlocksTrait
      */
     public function getContents($slug)
     {
-        if (!$block = $this->get($slug)) {
-            return false;
-        }
-
-        return $block->content;
+        return $this->Blocks->getContents($slug);
     }
 }

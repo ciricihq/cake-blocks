@@ -1,7 +1,6 @@
 <?php
 namespace Cirici\Blocks\Test\TestCase\View\Helper;
 
-use Cake\I18n\FrozenTime;
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
 use Cirici\Blocks\View\Helper\BlocksHelper;
@@ -21,8 +20,8 @@ class BlocksHelperTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $view = new View();
-        $this->Blocks = new BlocksHelper($view);
+        $this->view = new View();
+        $this->Blocks = new BlocksHelper($this->view);
     }
 
     /**
@@ -38,35 +37,13 @@ class BlocksHelperTest extends TestCase
     }
 
     /**
-     * Test getFull method
+     * Tests BlocksHelper.
      *
      * @return void
      */
-    public function testGetFull()
-    {
-        $expected = [
-            'id' => 1,
-            'title' => 'Lorem ipsum dolor sit amet',
-            'slug' => 'welcome',
-            'content' => 'Lorem ipsum dolor sit amet, aliquet feugiat.',
-            'created' => new FrozenTime('2015-12-31 15:23:57'),
-            'modified' => new FrozenTime('2015-12-31 15:23:57')
-        ];
-        $block = $this->Blocks->get('welcome')->toArray();
-        $this->assertArraySubset($expected, $block);
-    }
-
-    /**
-     * Test get method
-     *
-     * @return void
-     */
-    public function testGet()
+    public function testConstruct()
     {
         $block = $this->Blocks->getContents('welcome');
         $this->assertEquals('Lorem ipsum dolor sit amet, aliquet feugiat.', $block);
-
-        $block = $this->Blocks->getContents('me-l-invento');
-        $this->assertFalse($block);
     }
 }
