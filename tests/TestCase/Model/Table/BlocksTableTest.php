@@ -113,8 +113,9 @@ class BlocksTableTest extends TestCase
             'created' => new FrozenTime('2015-12-31 15:23:57'),
             'modified' => new FrozenTime('2015-12-31 15:23:57')
         ];
-        $block = $this->Blocks->getBlock('welcome')->toArray();
-        $this->assertArraySubset($expected, $block);
+        $block = $this->Blocks->getBlock('welcome');
+        $this->assertInstanceOf('Cirici\Blocks\Model\Entity\Block', $block);
+        $this->assertArraySubset($expected, $block->toArray());
     }
 
     /**

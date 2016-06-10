@@ -36,14 +36,40 @@ class BlocksHelperTest extends TestCase
         parent::tearDown();
     }
 
+    public function testConstruct()
+    {
+        $this->assertAttributeEquals(
+            'Cirici/Blocks.Blocks',
+            'table',
+            $this->Blocks
+        );
+
+        $this->assertAttributeEquals(
+            'BlBlocks',
+            'table',
+            new BlocksHelper($this->view, ['table' => 'BlBlocks'])
+        );
+    }
+
     /**
      * Tests BlocksHelper.
      *
      * @return void
      */
-    public function testConstruct()
+    public function testGetContents()
     {
         $block = $this->Blocks->getContents('welcome');
         $this->assertEquals('Lorem ipsum dolor sit amet, aliquet feugiat.', $block);
+    }
+
+    /**
+     * Tests BlocksHelper.
+     *
+     * @return void
+     */
+    public function testGet()
+    {
+        $block = $this->Blocks->get('welcome');
+        $this->assertInstanceOf('Cirici\Blocks\Model\Entity\Block', $block);
     }
 }
