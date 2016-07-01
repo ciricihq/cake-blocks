@@ -21,12 +21,6 @@ class BlockHelper extends Helper
     {
         parent::__construct($view, $config);
 
-        $this->table = Configure::read('Blocks.table');
-
-        if ($this->config('table')) {
-            $this->table = $this->config('table');
-        }
-
-        $this->Blocks = TableRegistry::get($this->table);
+        $this->initializeBlocks($config);
     }
 }

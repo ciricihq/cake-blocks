@@ -1,6 +1,9 @@
 <?php
 namespace Cirici\Blocks\Utility;
 
+use Cake\Core\Configure;
+use Cake\ORM\TableRegistry;
+
 trait BlocksTrait
 {
     /**
@@ -15,6 +18,23 @@ trait BlocksTrait
      * @var Cirici\Blocks\Model\Table\Blocks
      */
     protected $Blocks;
+
+    /**
+     * Used to initialize the BlocksTable instance.
+     *
+     * @param  array  $config Array of additional configuration options.
+     * @return void
+     */
+    public function initializeBlocks(array $config = [])
+    {
+        $this->table = Configure::read('Blocks.table');
+
+        if (isset($config['table'])) {
+            $this->table = $config['table'];
+        }
+
+        $this->Blocks = TableRegistry::get($this->table);
+    }
 
     /**
      * Retrieves an entire block from given identifier
