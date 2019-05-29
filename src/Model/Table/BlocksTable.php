@@ -15,8 +15,31 @@ class BlocksTable extends Table
     public function initialize(array $config)
     {
         $this->table('bl_blocks');
+
+        $this->displayField('title');
         $this->primaryKey('id');
+
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Cirici/Files.Filed');
+        $this->addBehavior('Tools.Slugged', [
+            'unique' => true,
+            'case' => 'low',
+        ]);
+        $this->addBehavior('Search.Search');
+        $this->searchManager()
+            ->add('search', 'Search.Like', [
+                'before' => true,
+                'after' => true,
+                'fieldMode' => 'OR',
+                'comparison' => 'LIKE',
+                'wildcardAny' => '*',
+                'wildcardOne' => '?',
+                'field' => [
+                    'title',
+                    'slug'
+                ],
+            ])
+        ;
     }
 
     /**
